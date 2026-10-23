@@ -1,43 +1,43 @@
-Component	Value
------------------------
-Protocol	https
-Host	    api.example.com
-Path	    /students/101
-Resource	students
-Resource    identifier	101
+| Component	 |  Value |
+|---|---|
+| Protocol	|  https |
+| Host	  |    api.example.com |
+| Path	   |   /students/101 |
+| Resource	|  students |
+| Resource  |  identifier	101 |
 
 Explanation: The protocol defines how the client communicates with the server. The host identifies the server, while the path identifies the requested resource. In this example, students/101 refers to student record 101.
 
 ---------------------------------------------------------------
 
-Operation	            HTTP method	    Endpoint
-----------------------------------------
-Retrieve all students	GET	            /students
-Create a student	    POST	        /students
-Retrieve student 101	GET	            /students/101
-Update student 101	    PUT	            /students/101
-Delete student 101	    DELETE	        /students/101
+| Operation	        |      HTTP method	 |   Endpoint |
+|---|---|---|
+| Retrieve all students	|  GET	      |      /students |
+| Create a student	  |    POST	    |      /students |
+| Retrieve student 101	|  GET	     |       /students/101 |
+| Update student 101	 |   PUT	     |       /students/101 |
+| Delete student 101	  |  DELETE	    |     /students/101 |
 
 Different methods communicate the intended action to the API. GET retrieves data, POST creates a resource, PUT updates or replaces it, and DELETE requests its removal.
 
 ---------------------------------------------------------------
 
-Status	  Meaning	    Test
---------------------------------------------------------
-200	      OK	        GET a post; PUT or DELETE a post
-201	      Created	    POST a new post
-404	      Not Found	    GET a nonexistent post
+| Status	|  Meaning	  |    Test |
+|---|---|---|
+| 200	  |    OK	    |      GET a post; PUT or DELETE a post |
+| 201	  |    Created	   |    POST a new post |
+| 404	   |   Not Found	  |   GET a nonexistent post |
 
 A successful response means the server processed the request according to its status. A 404 means the server could not find the requested resource.
 
 --------------------------------------------------------------
 
-Feature	        Public API	                                    Protected API
--------------------------------------------------------------
-Access	        May be available without authentication	        Requires valid authentication
-Credentials	    Not necessarily required	                    Often uses an API key or access token
-Example	        JSONPlaceholder posts	                        A private student management API
-Security	    Access may be unrestricted or rate-limited	    Access is controlled by authentication and permissions
+| Feature	    |    Public API	                    |                Protected API |
+|---|---|---|
+| Access	   |     May be available without authentication	    |     Requires valid authentication |
+| Credentials	   |   Not necessarily required	         |             Often uses an API key or access token |
+| Example	   |     JSONPlaceholder posts	             |             A private student management API |
+| Security	  |    Access may be unrestricted or rate-limited	  |    Access is controlled by authentication and permissions |
 
 An API being public does not mean every operation is unrestricted.
 
